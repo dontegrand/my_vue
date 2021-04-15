@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+$font-size: 14px;
+$font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-color: #333;
+
+// colors
+$color-primary: #409EFF;
+$color-success: #67C23A;
+$color-warning: #E6A23C;
+$color-danger: #F56C6C;
+$color-info: #909399;
+
+
+$theme-colors: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+  info: $color-info
+);
+
+// aligns
+$aligns: (
+  left: left,
+  right: right,
+  center: center
+);
+
+// pos
+$position: (
+  top: t,
+  bottom: b,
+  left: l,
+  right: r
+);
+

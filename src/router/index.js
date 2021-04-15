@@ -5,6 +5,11 @@ Vue.use(Router)
 
 export default new Router({
   mode:'history',
+  linkActiveClass: 'open active',
+  scrollBehavior: (to, from, savedPosition) => {
+    if (to.meta.keepAlive && savedPosition) return savedPosition
+    else return { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',

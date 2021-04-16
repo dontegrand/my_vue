@@ -1,5 +1,6 @@
-@import './variable.scss';
-@import './util-layout.scss';
-@import './util-text.scss';
-@import './reset';
-@import './response.scss'
+@import './_variable.scss';
+@import './response.scss';
+@import './_func.scss';
+@import './_mixin.scss';
+@import './common.scss';
+@import './custom.scss';

@@ -11,5 +11,6 @@ export default {
 </script>
 
 <style lang="scss">
-
+// @import '../src/assets/scss/_mixin.scss';
+// @import '../src/assets/scss/_variable.scss';
 </style>

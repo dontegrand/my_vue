@@ -1,0 +1,5 @@
+// 常用function
+
+@function pxtorem($px) {
+  @return $px / $basicWidth * 1rem;
+}

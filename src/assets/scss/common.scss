@@ -1,0 +1,88 @@
+// 消除默认样式
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+li, ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  outline: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+button,
+span,
+a {
+&:focus {
+  outline: none;
+}
+}
+
+input {
+  -webkit-appearance:none;
+}
+input::-ms-clear { display: none; }
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+// 常用便捷类
+
+// 文字颜色和位置 class="text-success text-danger" class="text-center text-right"
+.text {
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      color: $value;
+    }
+  }
+
+  @each $align, $value in $aligns {
+    &-#{$align} {
+      text-align: $value;
+    }
+  }
+}
+
+
+
+// 外边距和内边距 class="m-10 mt-10 mb-10 ml-10 mr-10" class="p-10 pt-10 pb-10 pl-10 pr-10"
+$mp-begin: 2;
+$mp-end: 100;
+@for $i from $mp-begin through $mp-end {
+  .m {
+    &-#{$i} {
+      margin: $i+px;
+    }
+
+    @each $key, $value in $position {
+      &#{$value}-#{$i} {
+        margin-#{$key}: $i+px;
+      }
+    }
+  }
+
+  .p {
+    &-#{$i} {
+      padding: $i+px;
+    }
+    @each $key, $value in $position {
+      &#{$value}-#{$i} {
+        padding-#{$key}: $i+px;
+      }
+    }
+  }
+}
+
